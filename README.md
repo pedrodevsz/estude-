@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📚 Estude+ – Plataforma de Estudos com IA
 
-## Getting Started
+Estude+ é uma plataforma moderna de aprendizado que une anotações em Markdown, flashcards inteligentes e quizzes interativos — tudo com auxílio de inteligência artificial. Ideal para estudantes, autodidatas e criadores de conteúdo.
 
-First, run the development server:
+---
 
+## 🚀 Tech Stack
+
+### Frontend
+- ⚛️ [Next.js](https://nextjs.org/) (App Router)
+- 🎨 [TailwindCSS](https://tailwindcss.com/) + [Shadcn/UI](https://ui.shadcn.com/)
+- 💡 [Zustand](https://zustand-demo.pmnd.rs/) (estado global)
+- 📝 Markdown Editor (`@uiw/react-md-editor`)
+- 🌗 Tema claro/escuro com `tailwind dark:`
+
+### Backend (planejado)
+- ☕ Java com Spring Boot
+- 🧠 Integração com OpenAI API ou HuggingFace (quizzes e resumos automáticos)
+- 📦 Banco: PostgreSQL / Supabase / MongoDB / mysql (ainda pesquisando)
+
+---
+
+## ✨ Funcionalidades
+
+- ✅ Criar anotações com Markdown
+- 🧠 Gerar **flashcards** a partir das notas
+- ❓ Criar **quizzes interativos** automaticamente
+- 🔖 Organizar conteúdos por tags e cadernos
+- 🔁 Sistema de repetição espaçada (em breve)
+- 💾 Exportar notas como PDF
+- 🔐 Autenticação com NextAuth (GitHub, Google)
+
+---
+
+## 🖼️ Screenshots
+
+![Home](./public/demo/homepage.png)
+> Landing Page moderna e responsiva
+
+![Editor](./public/demo/editor.png)
+> Editor de anotações com preview Markdown
+
+---
+
+## 💡 Contribuição
+
+Contribuições são muito bem-vindas! Sinta-se à vontade para abrir issues ou pull requests com melhorias, ideias ou correções.
+
+---
+
+## 🛠️ Instalação local
+
+1. **Clone o projeto**
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/seunome/estudo-plus.git
+cd estudo-plus
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. **Instale as deps**
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. **Configure as vars ambiente (exemplo)**
+```bash
+  NEXTAUTH_SECRET=suasecret
+  NEXTAUTH_URL=http://localhost:3000
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Integração com OpenAI (opcional)
+  OPENAI_API_KEY=sk-...
 
-## Learn More
+```
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+4. **Inicie o projeto**
+```
+npm run dev
+```
